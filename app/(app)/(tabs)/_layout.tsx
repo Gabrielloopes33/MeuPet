@@ -7,19 +7,30 @@ export default function TabLayout() {
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
-          backgroundColor: '#000',
+          backgroundColor: '#FFFFFF',
           borderTopWidth: 0,
-          paddingBottom: 25,
-          paddingTop: 10,
-          height: 85,
+          paddingBottom: 34,
+          paddingTop: 12,
+          height: 90,
+          shadowColor: '#000',
+          shadowOffset: {
+            width: 0,
+            height: -2,
+          },
+          shadowOpacity: 0.1,
+          shadowRadius: 8,
+          elevation: 10,
+          borderTopLeftRadius: 25,
+          borderTopRightRadius: 25,
+          position: 'absolute',
         },
         tabBarLabelStyle: {
-          fontSize: 12,
-          fontWeight: '500',
-          marginTop: 5,
+          fontSize: 11,
+          fontWeight: '600',
+          marginTop: 6,
         },
         tabBarActiveTintColor: '#4A5FE7',
-        tabBarInactiveTintColor: '#999',
+        tabBarInactiveTintColor: '#9CA3AF',
         tabBarIconStyle: {
           marginBottom: 0,
         },
@@ -27,12 +38,12 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Feed',
+          title: 'Home',
           headerShown: false,
           tabBarIcon: ({ color, focused }) => (
             <Ionicons 
               name={focused ? 'home' : 'home-outline'} 
-              size={24} 
+              size={focused ? 26 : 24} 
               color={color} 
             />
           ),
@@ -41,12 +52,12 @@ export default function TabLayout() {
       <Tabs.Screen
         name="pet"
         options={{
-          title: 'pet',
+          title: 'Pets',
           headerShown: false,
           tabBarIcon: ({ color, focused }) => (
             <Ionicons 
               name={focused ? 'paw' : 'paw-outline'} 
-              size={24} 
+              size={focused ? 26 : 24} 
               color={color} 
             />
           ),
@@ -55,12 +66,12 @@ export default function TabLayout() {
       <Tabs.Screen
         name="agenda"
         options={{
-          title: 'agenda',
+          title: 'Agenda',
           headerShown: false,
           tabBarIcon: ({ color, focused }) => (
             <Ionicons 
               name={focused ? 'calendar' : 'calendar-outline'} 
-              size={24} 
+              size={focused ? 26 : 24} 
               color={color} 
             />
           ),
@@ -69,12 +80,12 @@ export default function TabLayout() {
       <Tabs.Screen
         name="perfil"
         options={{
-          title: 'perfil',
+          title: 'Perfil',
           headerShown: false,
           tabBarIcon: ({ color, focused }) => (
             <Ionicons 
               name={focused ? 'person' : 'person-outline'} 
-              size={24} 
+              size={focused ? 26 : 24} 
               color={color} 
             />
           ),

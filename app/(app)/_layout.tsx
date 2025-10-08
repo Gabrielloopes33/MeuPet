@@ -13,6 +13,13 @@ export default function AppLayout() {
           headerShown: false 
         }} 
       />
+      <Stack.Screen 
+        name="add-pet" 
+        options={{ 
+          headerShown: false,
+          presentation: 'card',
+        }} 
+      />
     </Stack>
   );
 }

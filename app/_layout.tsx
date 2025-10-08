@@ -8,6 +8,7 @@ import 'react-native-reanimated';
 import { useColorScheme } from '../components/useColorScheme';
 
 import { AuthProvider, useAuth } from './context/AuthContext';
+import { PetProvider } from './context/PetContext';
 
 function useProtectedRoute() {
   const { session, isLoading } = useAuth();
@@ -48,7 +49,9 @@ export default function RootLayout() {
 
   return (
     <AuthProvider>
-      <RootLayoutNav />
+      <PetProvider>
+        <RootLayoutNav />
+      </PetProvider>
     </AuthProvider>
   );
 }

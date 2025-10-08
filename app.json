@@ -25,7 +25,12 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.anonymous.MeuPet"
     },
     "web": {
       "bundler": "metro",
@@ -34,7 +39,20 @@
     },
     "plugins": [
       "expo-router",
-      "expo-secure-store"
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "O app precisa acessar suas fotos para que você possa adicionar fotos dos seus pets.",
+          "cameraPermission": "O app precisa acessar sua câmera para que você possa tirar fotos dos seus pets."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "O app precisa acessar sua localização para encontrar pet shops e serviços próximos a você."
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
