@@ -7,6 +7,7 @@ import 'react-native-reanimated';
 
 import { useColorScheme } from '../components/useColorScheme';
 
+import { AppointmentProvider } from './context/AppointmentContext';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { PetProvider } from './context/PetContext';
 
@@ -50,7 +51,9 @@ export default function RootLayout() {
   return (
     <AuthProvider>
       <PetProvider>
-        <RootLayoutNav />
+        <AppointmentProvider>
+          <RootLayoutNav />
+        </AppointmentProvider>
       </PetProvider>
     </AuthProvider>
   );
